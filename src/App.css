@@ -173,6 +173,18 @@ p {
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .who-we-serve-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -181,7 +193,7 @@ p {
   }
   
   .section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
   }
   
   .grid-2,
@@ -195,6 +207,117 @@ p {
   
   h2 {
     font-size: 1.75rem;
+  }
+
+  /* Header responsive */
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+
+  /* Hero responsive */
+  .hero-buttons {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .hero-stats > div {
+    padding: 0.75rem 0 !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-stats > div:last-child {
+    border-bottom: none;
+  }
+
+  /* About responsive */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .who-we-serve-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Services responsive */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Benefits responsive */
+  .benefits-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .benefits-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .benefits-stats > div {
+    padding: 1rem 0;
+  }
+
+  /* Contact responsive */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Footer responsive */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center;
+  }
+
+  .footer-grid a {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .benefits-stats {
+    grid-template-columns: 1fr !important;
   }
 }
 

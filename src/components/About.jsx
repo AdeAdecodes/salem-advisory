@@ -23,7 +23,7 @@ const About = () => {
   return (
     <section id="about" className="section" style={{ backgroundColor: 'var(--bg-white)' }}>
       <div className="container">
-        <div style={{ 
+        <div className="about-grid" style={{ 
           display: 'grid', 
           gridTemplateColumns: '1fr 1fr', 
           gap: '4rem',
@@ -129,7 +129,7 @@ const About = () => {
             <h3 style={{ fontSize: '1.75rem' }}>Who We Serve</h3>
           </div>
           
-          <div style={{ 
+          <div className="who-we-serve-grid" style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(4, 1fr)', 
             gap: '1.5rem' 

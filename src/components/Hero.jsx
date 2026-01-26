@@ -24,28 +24,6 @@ const Hero = () => {
           margin: '0 auto',
           textAlign: 'center'
         }}>
-          {/* Badge */}
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            padding: '0.5rem 1rem',
-            backgroundColor: 'rgba(61, 90, 128, 0.1)',
-            borderRadius: '100px',
-            marginBottom: '2rem',
-            fontSize: '0.875rem',
-            fontWeight: '500',
-            color: 'var(--primary)'
-          }}>
-            <span style={{
-              width: '6px',
-              height: '6px',
-              borderRadius: '50%',
-              backgroundColor: 'var(--primary)'
-            }}></span>
-            Company Building Specialists
-          </div>
-
           {/* Headline */}
           <h1 style={{ marginBottom: '1.5rem' }}>
             We Build, Launch & Lead{' '}
@@ -65,7 +43,7 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div style={{
+          <div className="hero-buttons" style={{
             display: 'flex',
             gap: '1rem',
             justifyContent: 'center',
@@ -90,7 +68,7 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div style={{
+          <div className="hero-stats" style={{
             display: 'flex',
             justifyContent: 'center',
             gap: '3rem',

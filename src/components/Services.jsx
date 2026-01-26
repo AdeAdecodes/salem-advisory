@@ -62,7 +62,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div style={{
+        <div className="services-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '2rem'

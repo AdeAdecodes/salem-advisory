@@ -86,7 +86,7 @@ const Contact = () => {
   return (
     <section id="contact" className="section" style={{ backgroundColor: 'var(--bg-white)' }}>
       <div className="container">
-        <div style={{
+        <div className="contact-grid" style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gap: '4rem',

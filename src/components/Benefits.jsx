@@ -56,7 +56,7 @@ const Benefits = () => {
           </p>
         </div>
 
-        <div style={{
+        <div className="benefits-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '1.5rem'
@@ -113,7 +113,7 @@ const Benefits = () => {
           borderRadius: '16px',
           color: 'white'
         }}>
-          <div style={{
+          <div className="benefits-stats" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',
             gap: '2rem',
