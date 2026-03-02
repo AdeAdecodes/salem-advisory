@@ -19,7 +19,6 @@ const Testimonials = () => {
             letterSpacing: '0.05em',
             marginBottom: '0.75rem'
           }}>
-            Client Success
           </p>
           <h2>Our Clients</h2>
         </div>
@@ -32,9 +31,7 @@ const Testimonials = () => {
           ))}
         </div>
 
-        <p style={{ marginTop: '1.5rem', textAlign: 'center', color: 'var(--text-muted)' }}>
-          Want your logo here? Email us at <a href="mailto:hello@salemadvisory.org" style={{ color: 'var(--primary)' }}>hello@salemadvisory.org</a>
-        </p>
+        
       </div>
     </section>
   )
