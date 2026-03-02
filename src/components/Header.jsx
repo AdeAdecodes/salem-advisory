@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import logo from '../assets/logo.png'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -80,13 +81,16 @@ const Header = () => {
         justifyContent: 'space-between',
         alignItems: 'center'
       }}>
-        <div style={{ 
-          fontSize: '1.375rem', 
-          fontWeight: '600', 
-          color: 'var(--primary)',
-          letterSpacing: '-0.02em'
-        }}>
-          Salem Advisory
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <img src={logo} alt="Salem Advisory" style={{ height: 36, width: 'auto', display: 'block' }} />
+          <div style={{ 
+            fontSize: '1.375rem', 
+            fontWeight: '600', 
+            color: 'var(--primary)',
+            letterSpacing: '-0.02em'
+          }}>
+            Salem Advisory
+          </div>
         </div>
 
         {/* Desktop Nav */}
