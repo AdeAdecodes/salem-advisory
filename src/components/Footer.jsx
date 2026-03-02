@@ -1,5 +1,6 @@
 import React from 'react'
 import { Mail, Phone, ArrowUp } from 'lucide-react'
+import logo from '../assets/logo.png'
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -40,12 +41,16 @@ const Footer = () => {
           {/* Brand Column */}
           <div>
             <div style={{
-              fontSize: '1.5rem',
-              fontWeight: '700',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.75rem',
               marginBottom: '1rem'
             }}>
-              <span style={{ color: 'white' }}>Salem</span>
-              <span style={{ color: 'var(--accent)' }}>Advisory</span>
+              <img src={logo} alt="Salem Advisory" style={{ height: 40, width: 'auto', display: 'block' }} />
+              <div style={{ fontSize: '1.25rem', fontWeight: '700' }}>
+                <span style={{ color: 'white' }}>Salem</span>
+                <span style={{ color: 'var(--accent)', marginLeft: '0.25rem' }}>Advisory</span>
+              </div>
             </div>
             <p style={{
               fontSize: '0.9375rem',
