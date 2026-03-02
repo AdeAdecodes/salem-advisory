@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import logname from '../assets/logname.png'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -51,7 +52,7 @@ const Header = () => {
     cursor: 'pointer',
     fontSize: '0.9375rem',
     fontWeight: '500',
-    color: 'var(--text-secondary)',
+    color: isScrolled || isMenuOpen ? 'var(--text-secondary)' : 'rgba(255, 255, 255, 0.9)',
     padding: '0.5rem 1rem',
     borderRadius: '6px',
     transition: 'all 0.2s ease',
@@ -80,19 +81,30 @@ const Header = () => {
         justifyContent: 'space-between',
         alignItems: 'center'
       }}>
-        <div style={{ 
-          fontSize: '1.375rem', 
-          fontWeight: '600', 
-          color: 'var(--primary)',
-          letterSpacing: '-0.02em'
-        }}>
-          Salem Advisory
+        <div
+          onClick={() => scrollToSection('hero')}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            cursor: 'pointer'
+          }}
+        >
+          <img
+            src={logname}
+            alt="Salem Advisory Logo"
+            style={{
+              height: '32px',
+              width: 'auto',
+              filter: isScrolled || isMenuOpen ? 'none' : 'brightness(0) invert(1)',
+              transition: 'filter 0.3s ease'
+            }}
+          />
         </div>
 
         {/* Desktop Nav */}
-        <nav className="desktop-nav" style={{ 
-          display: 'flex', 
-          alignItems: 'center', 
+        <nav className="desktop-nav" style={{
+          display: 'flex',
+          alignItems: 'center',
           gap: '0.5rem'
         }}>
           <button onClick={() => scrollToSection('hero')} style={linkStyle}>
@@ -107,17 +119,25 @@ const Header = () => {
           <button onClick={() => scrollToSection('benefits')} style={linkStyle}>
             Why Us
           </button>
-          <button 
-            onClick={() => scrollToSection('contact')} 
-            className="btn btn-primary"
-            style={{ marginLeft: '0.5rem', padding: '0.625rem 1.25rem', fontSize: '0.9375rem' }}
+          <button
+            onClick={() => scrollToSection('contact')}
+            className={`btn ${isScrolled || isMenuOpen ? 'btn-primary' : ''}`}
+            style={{
+              marginLeft: '0.5rem',
+              padding: '0.625rem 1.25rem',
+              fontSize: '0.9375rem',
+              backgroundColor: isScrolled || isMenuOpen ? 'var(--primary)' : 'var(--accent)',
+              color: isScrolled || isMenuOpen ? 'white' : 'var(--primary)',
+              boxShadow: isScrolled || isMenuOpen ? 'var(--shadow-sm)' : 'none',
+              border: 'none'
+            }}
           >
             Get Started
           </button>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="mobile-menu-btn"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           style={{
@@ -126,7 +146,7 @@ const Header = () => {
             border: 'none',
             cursor: 'pointer',
             padding: '0.5rem',
-            color: 'var(--text-primary)'
+            color: isScrolled || isMenuOpen ? 'var(--text-primary)' : 'white'
           }}
           aria-label="Toggle menu"
         >
@@ -135,7 +155,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Nav */}
-      <nav 
+      <nav
         className="mobile-nav"
         style={{
           display: isMenuOpen ? 'flex' : 'none',
@@ -165,8 +185,8 @@ const Header = () => {
           Testimonials
         </button>
         <div style={{ padding: '1rem 1.5rem' }}>
-          <button 
-            onClick={() => scrollToSection('contact')} 
+          <button
+            onClick={() => scrollToSection('contact')}
             className="btn btn-primary"
             style={{ width: '100%' }}
           >

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Mail, Phone, ArrowUp } from 'lucide-react'
+import logname from '../assets/logname.png'
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -39,13 +40,16 @@ const Footer = () => {
         }}>
           {/* Brand Column */}
           <div>
-            <div style={{
-              fontSize: '1.5rem',
-              fontWeight: '700',
-              marginBottom: '1rem'
-            }}>
-              <span style={{ color: 'white' }}>Salem</span>
-              <span style={{ color: 'var(--accent)' }}>Advisory</span>
+            <div style={{ marginBottom: '1.25rem' }}>
+              <img
+                src={logname}
+                alt="Salem Advisory Logo"
+                style={{
+                  height: '40px',
+                  width: 'auto',
+                  filter: 'brightness(0) invert(1)'
+                }}
+              />
             </div>
             <p style={{
               fontSize: '0.9375rem',
@@ -54,11 +58,11 @@ const Footer = () => {
               marginBottom: '1.5rem',
               maxWidth: '280px'
             }}>
-              Transforming entrepreneurial vision into operational reality. 
+              Transforming entrepreneurial vision into operational reality.
               We build companies from the ground up.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <a 
+              <a
                 href="mailto:hello@salemadvisory.org"
                 style={{
                   display: 'flex',
@@ -73,7 +77,7 @@ const Footer = () => {
                 <Mail size={16} />
                 hello@salemadvisory.org
               </a>
-              <a 
+              <a
                 href="tel:+2348067543206"
                 style={{
                   display: 'flex',
@@ -104,7 +108,7 @@ const Footer = () => {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {quickLinks.map((link, index) => (
                 <li key={index} style={{ marginBottom: '0.75rem' }}>
-                  <a 
+                  <a
                     href={link.href}
                     style={{
                       fontSize: '0.9375rem',
@@ -133,7 +137,7 @@ const Footer = () => {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {services.map((service, index) => (
                 <li key={index} style={{ marginBottom: '0.75rem' }}>
-                  <a 
+                  <a
                     href={service.href}
                     style={{
                       fontSize: '0.9375rem',
@@ -167,7 +171,7 @@ const Footer = () => {
             }}>
               Ready to turn your vision into reality?
             </p>
-            <a 
+            <a
               href="#contact"
               style={{
                 display: 'inline-block',

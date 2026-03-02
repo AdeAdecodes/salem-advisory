@@ -128,7 +128,7 @@ const Contact = () => {
                     width: '44px',
                     height: '44px',
                     borderRadius: '10px',
-                    backgroundColor: 'rgba(61, 90, 128, 0.1)',
+                    backgroundColor: 'rgba(25, 41, 56, 0.08)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',

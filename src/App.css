@@ -2,13 +2,14 @@
 
 :root {
   /* Primary Colors - Very Dark Blue tones */
-  --primary: #3D5A80;
-  --primary-dark: #2B4257;
-  --primary-light: #5A7A9E;
+  --primary: #192938; /* Dark azure */
+  --primary-dark: #192939; /* Dark blue (very close to dark azure) */
+  --primary-light: #2b3a45; /* subtle lighter shade for UI accents */
   
-  /* Secondary & Accent */
-  --secondary: #4A6FA5;
-  --accent: #6B8EC2;
+  /* Secondary & Accent (brand pastel orange accents) */
+  --secondary: #2b3a45;
+  --accent: #e4d4b3;
+  --accent-2: #e0c89f;
   
   /* Backgrounds */
   --bg-white: #FFFFFF;
@@ -219,6 +220,19 @@ p {
   }
 
   /* Hero responsive */
+  .hero-content {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .hero-bg-shape {
+    display: none !important;
+  }
+
+  .hero-right {
+    justify-content: center !important;
+  }
+
   .hero-buttons {
     flex-direction: column !important;
     width: 100%;
@@ -227,21 +241,6 @@ p {
   .hero-buttons .btn {
     width: 100%;
     justify-content: center;
-  }
-
-  .hero-stats {
-    flex-direction: column !important;
-    gap: 1rem !important;
-  }
-
-  .hero-stats > div {
-    padding: 0.75rem 0 !important;
-    border-right: none !important;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .hero-stats > div:last-child {
-    border-bottom: none;
   }
 
   /* About responsive */
