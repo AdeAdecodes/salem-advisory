@@ -74,7 +74,7 @@ const Footer = () => {
                 hello@salemadvisory.org
               </a>
               <a 
-                href="tel:+2348067543206"
+                href="tel:09134304448"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -86,7 +86,7 @@ const Footer = () => {
                 }}
               >
                 <Phone size={16} />
-                +234 806 754 3206
+                09134304448
               </a>
             </div>
           </div>

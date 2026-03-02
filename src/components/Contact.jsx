@@ -72,8 +72,8 @@ const Contact = () => {
     {
       icon: <Phone size={20} />,
       label: 'Phone',
-      value: '+234 806 754 3206',
-      link: 'tel:+2348067543206'
+      value: '09134304448',
+      link: 'tel:09134304448'
     },
     {
       icon: <MapPin size={20} />,
