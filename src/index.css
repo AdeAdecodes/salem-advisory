@@ -39,3 +39,12 @@ img {
 input, textarea, button, select {
   font-family: inherit;
 }
+
+.client-card:hover .special-hover {
+  transform: scale(2.5);
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.client-card:hover img:not(.special-hover) {
+  transform: scale(1.1);
+}

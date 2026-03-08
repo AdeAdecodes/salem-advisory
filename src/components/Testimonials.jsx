@@ -1,9 +1,11 @@
 import React from 'react'
+import octagramLogo from '../assets/Octagram logo.jpeg'
+import procurisLogo from '../assets/Procuris logo.png'
 
 const Testimonials = () => {
   const clients = [
-    { name: 'Procuris', src: 'https://procurisglobal.com/wp-content/uploads/2025/01/procurislogo.png', alt: 'Procuris' },
-    { name: 'Octagram', src: 'http://octagramtech.com/images/octagram-logo1.svg', alt: 'Octagram' },
+    { name: 'Procuris', src: procurisLogo, alt: 'Procuris' },
+    { name: 'Octagram', src: octagramLogo, alt: 'Octagram', className: 'special-hover', style: { maxHeight: 80 } },
     { name: 'Amaanah', src: 'https://amaanahfinance.com/wp-content/uploads/2025/12/amaanah-logo.svg', alt: 'Amaanah' }
   ]
 
@@ -26,7 +28,17 @@ const Testimonials = () => {
         <div className="client-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', alignItems: 'center' }}>
           {clients.map((c) => (
             <a key={c.name} href="mailto:hello@salemadvisory.org" className="client-card" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--bg-white)', borderRadius: 12, padding: '1rem', boxShadow: 'var(--shadow-sm)', textDecoration: 'none' }}>
-              <img src={c.src} alt={c.alt} style={{ maxHeight: 56, maxWidth: '100%', objectFit: 'contain' }} />
+              <img 
+                src={c.src} 
+                alt={c.alt} 
+                className={c.className || ''}
+                style={{ 
+                  maxHeight: c.style?.maxHeight || 56, 
+                  maxWidth: '100%', 
+                  objectFit: 'contain', 
+                  transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)' 
+                }} 
+              />
             </a>
           ))}
         </div>
