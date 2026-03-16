@@ -48,3 +48,52 @@ input, textarea, button, select {
 .client-card:hover img:not(.special-hover) {
   transform: scale(1.1);
 }
+
+/* Modern Logo Client Redesign */
+.client-logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.client-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  padding: 1rem;
+}
+
+.client-logo-img {
+  max-width: 100%;
+  max-height: 60px; /* Standard height */
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.6);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hover Effects */
+.client-logo-link:hover .client-logo-img {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.1);
+}
+
+/* Special handling for the large hover requested previously */
+.special-hover {
+  mix-blend-mode: multiply !important; /* Forces blending of white background */
+  background: transparent !important;
+}
+
+.client-logo-link:hover .special-hover {
+  transform: scale(1.5) !important; /* Slightly less extreme scaling to avoid layout shift */
+  filter: grayscale(0%) opacity(1) !important;
+  z-index: 10;
+  position: relative;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}

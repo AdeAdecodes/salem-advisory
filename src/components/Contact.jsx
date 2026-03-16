@@ -23,7 +23,7 @@ const Contact = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'd6da63a2-cbe7-4ae6-8bab-09b731467057',
+          access_key: 'd39b3a0b-5122-4456-9c40-f75a4c52a0c8',
           to_email: 'hello@salemadvisory.org',
           from_name: formData.name,
           subject: `New Contact Form Submission from ${formData.name}`,
